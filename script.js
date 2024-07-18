@@ -38,24 +38,23 @@ const fetchData = async () => {
 async function changeFilterSelection(toChange) {
   //for checking .filterCurrentSelected class
 
-  console.log(toChange)
+//   console.log(toChange)
   if (toChange == "MenFilterSelector") {
     console.log(1);
     if (!MenFilterSelector.classList.contains("filterCurrentSelected")) {
-        console.log(currentSelection)
+   
       MenFilterSelector.classList.add("filterCurrentSelected");
       currentSelection.classList.remove("filterCurrentSelected");
       currentSelection = MenFilterSelector;
       productsContainer.innerHTML = '';
       appendProducts("Mens");
       ProductCount= 0;
-      console.log(currentSelection)
+  
     }
   }
   if (toChange == "WomenFilterSelector") {
     console.log(2);
-    
-    console.log(currentSelection)
+
     if (!WomenFilterSelector.classList.contains("filterCurrentSelected")) {
 
         WomenFilterSelector.classList.add("filterCurrentSelected");
@@ -64,23 +63,21 @@ async function changeFilterSelection(toChange) {
       productsContainer.innerHTML = '';
       appendProducts("Womens");
       ProductCount = 0;
-      console.log(currentSelection)
+     
     }
   }
 
   if (toChange == "KidsFilterSelector") {
     console.log(3);
-    console.log(currentSelection)
     if (!KidsFilterSelector.classList.contains("filterCurrentSelected")) {
 
-        console.log()
       KidsFilterSelector.classList.add("filterCurrentSelected");
       currentSelection.classList.remove("filterCurrentSelected");
       currentSelection = KidsFilterSelector;
       productsContainer.innerHTML = '';
       appendProducts("Kids");
       ProductCount = 0;
-      console.log(currentSelection)
+
     }
   }
 }
